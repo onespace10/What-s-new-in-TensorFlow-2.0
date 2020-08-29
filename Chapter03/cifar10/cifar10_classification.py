@@ -19,7 +19,7 @@ class Cifar10Classification(object):
     self.data = Cifar10Data(batch_size=self.batch_size)
 
   def build_model(self, learning_rate, dropout_rate, model_dir):
-    """ build sequential
+    """ build sequential  생성한 데이터셋 객체를 간단한 tf.keras기반 모델로 입력한다.
     Args:
       learning_rate (float): learning rate
       dropout_rate (float): dropout
