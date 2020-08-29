@@ -29,7 +29,7 @@ class Cifar10Data(object):
     self.test_dataset = self.create_datasets(is_train_or_eval_or_test='test')
 
   def create_datasets(self, is_train_or_eval_or_test='train'):
-    """ function to create trai
+    """ function to create train sets 작성한 tfrecords 메소드를 이용하여 데이터셋 객체를 생성한다.
     """
     if is_train_or_eval_or_test is 'train':
       tfrecords_files = glob.glob(self.tfrecords_path + '/train/*')
