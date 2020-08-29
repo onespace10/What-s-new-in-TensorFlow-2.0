@@ -48,7 +48,7 @@ class Cifar10Classification(object):
     self.model.add(tf.keras.layers.MaxPooling2D(pool_size=[2, 2]))
     self.model.add(tf.keras.layers.Dropout(0.25))
 
-    # flatten
+    # flatten  데이터셋을 일차원으로 만든다
     self.model.add(tf.keras.layers.Flatten())
 
     self.model.add(tf.keras.layers.Dense(units=512, activation='relu'))
@@ -63,7 +63,7 @@ class Cifar10Classification(object):
 
 
   def train(self, num_epochs, steps_per_epoch):
-    """ train """
+    """ train 모델 학습을 위해 데이터셋 객체를 입력한다. """
     self.model.fit(self.data.train_dataset, epochs=num_epochs, 
       steps_per_epoch=steps_per_epoch)
     
