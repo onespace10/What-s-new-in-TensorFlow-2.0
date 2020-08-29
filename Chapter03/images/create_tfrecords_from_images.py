@@ -1,4 +1,4 @@
-""" Create tfrecords for image data"""
+""" Create tfrecords for image data 입력 이미지 파일을 tfrecords 파일로 변화하는 내용""" 
 import sys
 import os
 import glob
