@@ -53,7 +53,7 @@ def _get_file_names(eval_file_idx):
 def create_tfrecords(cifar10_data_folder, validation_data_idx):
   """ function to generate tfrecords
   Creates three sub-folders, train, eval, test and put resp 
-  tfr files
+  tfr files. CIFAR10 데이터를 이용하여 FRecords를 생성해보자.
   """
   batch_files = _get_file_names(validation_data_idx)
   tfrecords_outdir = './tfrecords'
